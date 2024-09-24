@@ -1,0 +1,164 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body{
+    background-color: black ;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    
+}
+header .logo{
+    font-size: 30;
+    margin-left: 30;
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+}
+header nav{
+    margin-left:  55%;
+    display: flex;
+    gap: 60px;
+    font-size: 18;
+    color: white;
+    cursor: pointer;
+    
+}
+header nav a{
+    text-decoration: none;
+    transition: .5s;
+    position: relative;
+}
+header nav a::before{
+    content: "";
+    position: absolute;
+    background:yellow;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    transition: .3s;
+}
+header nav a:hover::before{
+    width: 100%;
+    transition: .3s;
+}
+.home {
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+    align-items: center;
+    gap: 50px;
+}
+.home img{
+    width: 30em;
+}
+.home .text{
+
+}
+.home .text h1{
+    font-size: 60;
+}
+.home .text h1 span{
+    background: linear-gradient(90deg, rgb(200, 255, 0) , rgb(255, 136, 0));
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 0px 5px white);
+}
+.home .text h3{
+    font-size: 50;
+}
+.home .text p {
+    font-size: 20;
+}
+.social {
+    display: flex;
+    gap: 30px;
+}
+.social img{
+    width: 30px;
+    transition: .5s;
+}
+.social .facebook:hover{
+    filter: drop-shadow(0 0 10px rgb(0, 153, 255));
+}
+.social .instagram:hover{
+    filter: drop-shadow(0 0 10px rgb(255, 0, 255));
+}
+.social .whatsapp:hover{
+    filter: drop-shadow(0 0 10px rgb(0, 211, 0));
+}
+.social .discord:hover{
+    filter: drop-shadow(0 0 10px rgb(57, 0, 212));
+}
+.text .change-text span::after{
+    content: "Student";
+    color: rgb(248, 38, 108);
+    animation: text 5s infinite ease ;
+}
+
+@keyframes text {
+    0%,100%{
+        content: "Student";
+    }
+    30%{
+        content: "Programmer";
+    }
+    70%{
+        content: "Designer";
+    }
+
+}
+
+
+.skills {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills h1{
+    font-size: 50;
+}
+.skills .bar div{
+    width: 70em;
+    height: 50px;
+    background: rgba(197, 197, 197, .1);
+    border-radius: 30px;
+    position: relative;
+}
+.skills .html div span{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(38, 38, 231), rgb(0, 213, 255));
+
+}
+.skills .css div span{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(0, 255, 26), rgb(166, 255, 0));
+}
+.skills .python div span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 0, 153));
+}
+.skills .photoshop div span{
+    width: 67%;
+    height: 100%;
+    position: absolute;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(242, 255, 0), rgb(255, 136, 0));
+}
