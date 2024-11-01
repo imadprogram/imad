@@ -96,25 +96,36 @@ header nav a:hover::before{
 .social .discord:hover{
     filter: drop-shadow(0 0 10px rgb(57, 0, 212));
 }
-.text .change-text span::after{
-    content: "Student";
-    color: rgb(248, 38, 108);
-    animation: text 5s infinite ease ;
+.text .change-text{
+    display: flex;
+    box-sizing: content-box;
+    height: 60px;
+    width: 15em;
 }
-
-@keyframes text {
-    0%,100%{
-        content: "Student";
-    }
-    30%{
-        content: "Programmer";
-    }
-    70%{
-        content: "Designer";
-    }
+.text .change-text .words{
+    font-size: 50;
+    overflow: hidden;
+    position: relative;
+    margin-left: 30px;
+}
+.text .change-text .word{
+    animation: anim 4s ease-in-out infinite;
 
 }
-
+@keyframes anim {
+    33%{
+        transform: translateY(-100%);
+    }
+    66%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(-300%);
+    }
+    /* 100%{
+        transform: translateY(-400%);
+    } */
+}
 
 .skills {
     height: 100vh;
